@@ -7,6 +7,8 @@ export const categories = [
   { slug: 'beans-grains', name: 'Beans & Grains',      emoji: '🌾' },
   { slug: 'oils',         name: 'Oils & Pantry',       emoji: '🫒' },
   { slug: 'frozen',       name: 'Frozen Foods',         emoji: '🧊' },
+  { slug: 'teas',         name: 'Teas & Wellness',      emoji: '🍵' },
+  { slug: 'kitchen',      name: 'Kitchen Accessories',  emoji: '🍽️' },
 ];
 
 export const products = [
@@ -145,14 +147,14 @@ export const products = [
   },
   {
     id: 'ehm-013',
-    name: 'Smoked Farmed Rabbits',
+    name: 'Smoked Rabbit Meat',
     category: 'smoked-meats',
     emoji: '🐇',
     price: 45000,
     unit: 'whole rabbit',
     description:
-      'Premium smoked farmed rabbits. Lean, flavourful, and ready to cook. Great for stews, grills, and traditional dishes. Slow smoked to perfection and seasoned with signature blend of spices.',
-    details: ['Whole rabbit', 'Slow smoked', 'Lean protein', 'Seasoned with spices'],
+      'One of the most tasty, tender, juicy, high protein meat around, slow-smoked to perfection and seasoned with our signature blend of spices. Great for daily enjoyment.',
+    details: ['Whole rabbit', 'Slow smoked to perfection', 'High protein', 'Signature spice blend'],
   },
   {
     id: 'ehm-014',
@@ -221,6 +223,50 @@ export const products = [
     description:
       'Tender, juicy rabbit slow-smoked to perfection and seasoned with a signature blend of Nigerian spices. Lean, high-protein delicacy.',
     details: ['Whole rabbit', 'Spice-seasoned', 'Slow smoked', 'High in protein, low in fat'],
+  },
+  {
+    id: 'ehm-020',
+    name: 'Bitter Leaf Tea',
+    category: 'teas',
+    emoji: '🍵',
+    price: 5000,
+    unit: 'pack (50 tea bags)',
+    description:
+      'Enjoy the full nutritional benefits of pure Bitter Leaf (Vernonia amygdalina). Natural tea bags with strong medicinal properties, backed by modern medical science. Traditionally used to support cholesterol, diabetes, and digestive health. Drink as tea, garnish on soups, salads or stews with leftovers from tea bags.',
+    details: ['Natural tea bags', 'Pure Bitter Leaf', 'Medicinal properties', 'Young leaves, fresh and natural'],
+  },
+  {
+    id: 'ehm-022',
+    name: 'Ehmar Odorless Cassava Flour (25kg)',
+    category: 'beans-grains',
+    emoji: '🌾',
+    price: 65000,
+    unit: '25kg bag',
+    description:
+      'High quality cassava flour (HQCF). Gluten-free, processed with freshly harvested cassava roots in a nut and soy-free facility. Versatile flour with odorless flavour and powdery texture. Bulk bag perfect for restaurants, caterers, and large families.',
+    details: ['25kg bulk bag', 'Gluten-free', 'Odorless & powdery', 'Nut & soy-free facility'],
+  },
+  {
+    id: 'ehm-023',
+    name: 'Ehmar Odorless Cassava Flour (16oz)',
+    category: 'beans-grains',
+    emoji: '🌾',
+    price: 3500,
+    unit: '16oz pack',
+    description:
+      'High quality cassava flour (HQCF). Gluten-free, processed with freshly harvested cassava roots in a nut and soy-free facility. Versatile flour with odorless flavour and powdery texture. Convenient retail pack for home cooking.',
+    details: ['16oz resealable pack', 'Gluten-free', 'Odorless & powdery', 'Nut & soy-free facility'],
+  },
+  {
+    id: 'ehm-021',
+    name: 'Ehmar Food Warmer Mat',
+    category: 'kitchen',
+    emoji: '🔥',
+    price: 38000,
+    unit: 'per unit',
+    description:
+      'Electric food warming mat that keeps your meals hot and ready to serve. Sleek, modern design with digital temperature controls. Perfect for family dinners, parties, and everyday use. Place your plates and bowls directly on the mat and enjoy warm food for hours.',
+    details: ['Electric heated surface', 'Digital temperature controls', 'Holds multiple plates', 'Easy to clean', 'Safe for all plate types'],
   },
 ];
 

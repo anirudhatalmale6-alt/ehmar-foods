@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Phone, MessageCircle, Search, ShoppingCart, Menu, X, Leaf } from 'lucide-react';
+import { Phone, MessageCircle, Search, ShoppingCart, Menu, X } from 'lucide-react';
 import { useCart } from '../data/cartContext';
 
 export default function Header() {
@@ -58,21 +58,8 @@ export default function Header() {
       <div className="bg-white shadow-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0 no-underline">
-            <div className="bg-primary rounded-full p-2">
-              <Leaf className="w-6 h-6 text-white" />
-            </div>
-            <div className="leading-tight">
-              <span className="text-xl sm:text-2xl font-bold text-primary tracking-tight">
-                Ehmar
-              </span>
-              <span className="text-xl sm:text-2xl font-bold text-secondary tracking-tight ml-1">
-                Foods
-              </span>
-              <p className="text-[10px] sm:text-xs text-gray-500 -mt-0.5 tracking-wide uppercase">
-                Fresh &bull; Quality &bull; Affordable
-              </p>
-            </div>
+          <Link to="/" className="shrink-0 no-underline">
+            <img src="/logo.jpg" alt="Ehmar Foods" className="h-12 sm:h-14 w-auto" />
           </Link>
 
           {/* Search Bar (hidden on mobile, shown on md+) */}
