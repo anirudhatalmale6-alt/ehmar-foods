@@ -1,217 +1,244 @@
 /* ── Ehmar Foods – Product catalogue & helpers ───────────── */
 
 export const categories = [
-  { slug: 'snacks',    name: 'Snacks',    emoji: '🍿' },
-  { slug: 'proteins',  name: 'Proteins',  emoji: '🥩' },
-  { slug: 'grains',    name: 'Grains',    emoji: '🌾' },
-  { slug: 'frozen',    name: 'Frozen',    emoji: '🧊' },
-  { slug: 'spices',    name: 'Spices',    emoji: '🌶️' },
-  { slug: 'beverages', name: 'Beverages', emoji: '🥤' },
+  { slug: 'nuts-snacks',  name: 'Nuts & Snacks',      emoji: '🥜' },
+  { slug: 'seafood',      name: 'Seafood & Fish',      emoji: '🐟' },
+  { slug: 'smoked-meats', name: 'Smoked Meats',        emoji: '🍖' },
+  { slug: 'beans-grains', name: 'Beans & Grains',      emoji: '🌾' },
+  { slug: 'oils',         name: 'Oils & Pantry',       emoji: '🫒' },
+  { slug: 'frozen',       name: 'Frozen Foods',         emoji: '🧊' },
 ];
 
 export const products = [
-  // ── Snacks ─────────────────────────────────────────────
+  // ── Nuts & Snacks ─────────────────────────────────────
   {
-    id: 'snk-001',
-    name: 'Plantain Chips (Salted)',
-    category: 'snacks',
-    emoji: '🍌',
-    price: 1500,
-    description:
-      'Crispy, thinly sliced plantain chips seasoned with just the right amount of sea salt. A classic Nigerian snack perfect for any time of day.',
-    details: ['150 g pack', 'Made from ripe plantains', 'No preservatives', 'Gluten-free'],
-  },
-  {
-    id: 'snk-002',
-    name: 'Chin Chin (Original)',
-    category: 'snacks',
-    emoji: '🍪',
-    price: 1200,
-    description:
-      'Crunchy, sweet fried dough bites — the quintessential Nigerian chin chin made with premium flour and nutmeg.',
-    details: ['200 g pack', 'Traditional recipe', 'Baked with nutmeg', 'Family-size option available'],
-  },
-  {
-    id: 'snk-003',
-    name: 'Kulikuli (Groundnut Snack)',
-    category: 'snacks',
+    id: 'ehm-001',
+    name: 'Ehmar Foods Mixed Nuts',
+    category: 'nuts-snacks',
     emoji: '🥜',
-    price: 800,
-    description:
-      'Savoury groundnut snack with a satisfying crunch. A protein-rich traditional treat from Northern Nigeria.',
-    details: ['120 g pack', 'High protein', 'No artificial flavours', 'Traditional recipe'],
-  },
-
-  // ── Proteins ───────────────────────────────────────────
-  {
-    id: 'prt-001',
-    name: 'Stockfish (Okporoko)',
-    category: 'proteins',
-    emoji: '🐟',
-    price: 8500,
-    description:
-      'Premium dried stockfish, essential for authentic Nigerian soups like Egusi and Ogbono. Rich umami flavour.',
-    details: ['500 g pack', 'Air-dried Norwegian cod', 'No additives', 'Long shelf life'],
-  },
-  {
-    id: 'prt-002',
-    name: 'Dried Crayfish',
-    category: 'proteins',
-    emoji: '🦐',
-    price: 3500,
-    description:
-      'Finely ground dried crayfish — a must-have seasoning for Jollof Rice, stews, and soups.',
-    details: ['250 g pack', 'Ground fresh', 'Wild-caught', 'Packed in resealable bag'],
-  },
-  {
-    id: 'prt-003',
-    name: 'Smoked Catfish',
-    category: 'proteins',
-    emoji: '🐠',
-    price: 6000,
-    description:
-      'Whole smoked catfish, kiln-dried for intense flavour. Perfect for pepper soup and stews.',
-    details: ['2 pieces', 'Kiln-smoked', 'High protein', 'Ready to cook'],
-  },
-
-  // ── Grains ─────────────────────────────────────────────
-  {
-    id: 'grn-001',
-    name: 'Ofada Rice (Local)',
-    category: 'grains',
-    emoji: '🍚',
-    price: 4500,
-    description:
-      'Unpolished short-grain Nigerian Ofada rice with a distinctive nutty aroma. Pairs perfectly with Ofada sauce.',
-    details: ['2 kg bag', 'Unpolished', 'Locally sourced', 'Rich in fibre'],
-  },
-  {
-    id: 'grn-002',
-    name: 'Garri (White, Ijebu)',
-    category: 'grains',
-    emoji: '🥣',
-    price: 2000,
-    description:
-      'Fine-grained white Ijebu garri — ideal for soaking (garri soaking) or making eba. Sour fermented flavour.',
-    details: ['2 kg bag', 'Ijebu grade', 'Fine texture', 'Naturally fermented'],
-  },
-  {
-    id: 'grn-003',
-    name: 'Yam Flour (Elubo)',
-    category: 'grains',
-    emoji: '🫓',
-    price: 3000,
-    description:
-      'Finely milled yam flour for making smooth amala. Made from sun-dried yam slices.',
-    details: ['1 kg bag', 'Sun-dried', 'No additives', 'Smooth texture'],
-  },
-
-  // ── Frozen ─────────────────────────────────────────────
-  {
-    id: 'frz-001',
-    name: 'Frozen Whole Chicken',
-    category: 'frozen',
-    emoji: '🍗',
     price: 7500,
+    unit: 'per pack',
     description:
-      'Premium frozen whole chicken, cleaned and ready to cook. Great for stews, grills, and pepper soup.',
-    details: ['1.5 kg avg', 'Flash-frozen', 'Halal certified', 'Hormone-free'],
+      'Ehmar mixed nuts are snacks consisting of peanuts, cashews, almonds, walnuts, pecans & pistachios. A delicious blend of roasted premium quality nuts.',
+    details: ['Premium quality blend', 'Roasted to perfection', 'Rich in protein & healthy fats', 'Resealable pack'],
   },
   {
-    id: 'frz-002',
-    name: 'Frozen Croaker Fish',
-    category: 'frozen',
-    emoji: '🐟',
-    price: 5500,
-    description:
-      'Wild-caught Atlantic croaker, individually quick-frozen to lock in freshness. Ideal for frying or grilling.',
-    details: ['1 kg pack', 'Wild-caught', 'IQF processed', 'Scaled & gutted'],
-  },
-  {
-    id: 'frz-003',
-    name: 'Frozen Goat Meat',
-    category: 'frozen',
-    emoji: '🥩',
-    price: 9000,
-    description:
-      'Chopped goat meat cuts, perfect for Nigerian pepper soup, stew, or suya. Bone-in for extra flavour.',
-    details: ['1 kg pack', 'Bone-in cuts', 'Halal certified', 'Flash-frozen'],
-  },
-
-  // ── Spices ─────────────────────────────────────────────
-  {
-    id: 'spc-001',
-    name: 'Ground Cameroon Pepper',
-    category: 'spices',
-    emoji: '🌶️',
-    price: 2500,
-    description:
-      'Fiery ground Cameroon pepper (ata rodo) for authentic heat in soups, stews, and jollof rice.',
-    details: ['200 g jar', 'Pure ground', 'Intense heat', 'Sealed glass jar'],
-  },
-  {
-    id: 'spc-002',
-    name: 'Locust Beans (Iru/Dawadawa)',
-    category: 'spices',
+    id: 'ehm-002',
+    name: 'Ehmar Foods High Protein Dehydrated Refried Beans',
+    category: 'beans-grains',
     emoji: '🫘',
-    price: 1800,
+    price: 3500,
+    unit: 'per 3g pouch',
     description:
-      'Fermented locust beans — a traditional umami seasoning that elevates Egusi, Efo Riro, and more.',
-    details: ['150 g pack', 'Naturally fermented', 'Pungent flavour', 'Rich in protein'],
+      'Premium high protein dehydrated refried beans, packaged in a convenient pouch. Made from premium quality beans.',
+    details: ['High protein content', 'Dehydrated for long shelf life', 'Easy to prepare', 'Made from quality beans'],
   },
   {
-    id: 'spc-003',
-    name: 'Suya Spice Mix (Yaji)',
-    category: 'spices',
-    emoji: '🧂',
-    price: 1500,
+    id: 'ehm-003',
+    name: 'Dried Crayfish',
+    category: 'seafood',
+    emoji: '🦐',
+    price: 25000,
+    unit: '1kg pack',
     description:
-      'Authentic Yaji spice blend with ground peanuts, ginger, and chilli. The secret to perfect suya.',
-    details: ['200 g pack', 'Groundnut-based', 'Medium heat', 'Ready to use'],
+      'Premium quality clean dried crayfish, carefully sorted and free from shells. Essential for Nigerian soups and stews.',
+    details: ['1kg pack', 'Carefully sorted', 'Shell-free', 'Sun-dried for rich flavour'],
+  },
+  {
+    id: 'ehm-004',
+    name: 'Asa Fish (Large Catfish)',
+    category: 'seafood',
+    emoji: '🐟',
+    price: 15000,
+    unit: 'pack (2 large catfish)',
+    description:
+      'Fresh Asa fish — 2 large catfish per pack. A Nigerian favourite for pepper soup, stew, and grilling.',
+    details: ['2 large catfish per pack', 'Fresh and cleaned', 'Perfect for pepper soup', 'Rich in omega-3'],
+  },
+  {
+    id: 'ehm-005',
+    name: 'Smoked Mangala Fish',
+    category: 'seafood',
+    emoji: '🐠',
+    price: 20000,
+    unit: 'pack (3 pieces)',
+    description:
+      'Rich, smoky flavour Mangala fish — 3 pieces per pack. Perfect for soups, stews, and traditional Nigerian dishes.',
+    details: ['3 pieces per pack', 'Wood-smoked', 'Rich smoky flavour', 'Great for soups & stews'],
+  },
+  {
+    id: 'ehm-006',
+    name: 'Frozen French Fries',
+    category: 'frozen',
+    emoji: '🍟',
+    price: 15000,
+    unit: '2kg bag',
+    description:
+      'Premium frozen french fries, crispy and delicious. Perfect for home cooking. Crisp, straight-cut potatoes.',
+    details: ['2kg bag', 'Straight-cut', 'Quick fry or oven bake', 'Premium quality potatoes'],
+  },
+  {
+    id: 'ehm-007',
+    name: 'White Mushrooms',
+    category: 'frozen',
+    emoji: '🍄',
+    price: 2000,
+    unit: 'per pack',
+    description:
+      'Fresh white mushrooms, great for soups, stews, stir-fries, and everyday cooking. Small, hand-picked button mushrooms.',
+    details: ['Fresh pack', 'Hand-picked', 'Button variety', 'Ready to cook'],
+  },
+  {
+    id: 'ehm-008',
+    name: 'Stone-Free Clean Beans',
+    category: 'beans-grains',
+    emoji: '🫘',
+    price: 2500,
+    unit: '1kg',
+    description:
+      'Premium quality beans, carefully sorted and cleaned — completely stone-free. Ready to cook without extra sorting.',
+    details: ['1kg pack', '100% stone-free', 'Carefully sorted', 'Premium quality'],
+  },
+  {
+    id: 'ehm-009',
+    name: 'Palm Oil (5L Container)',
+    category: 'oils',
+    emoji: '🫒',
+    price: 20000,
+    unit: '5L container',
+    description:
+      'Pure, unrefined red palm oil in a 5L plastic container. Rich in vitamins and natural colour. Essential for Nigerian cooking.',
+    details: ['5 litres', '100% pure & natural', 'Rich red colour', 'No additives'],
+  },
+  {
+    id: 'ehm-010',
+    name: 'Palm Oil Private Label',
+    category: 'oils',
+    emoji: '🏷️',
+    price: 3000,
+    unit: 'per can',
+    description:
+      'Personalised Ehmar 60cl Palm Oil cans with your custom label — perfect for gifts, events, and branding.',
+    details: ['60cl can', 'Custom label available', 'Pure palm oil', 'Great for gifting'],
+  },
+  {
+    id: 'ehm-011',
+    name: 'Large Snails',
+    category: 'seafood',
+    emoji: '🐌',
+    price: 15000,
+    unit: '5 snails',
+    description:
+      'Fresh, cleaned large snails. Great for pepper soup, stew, and traditional Nigerian dishes.',
+    details: ['5 snails per pack', 'Cleaned and ready', 'Fresh quality', 'Perfect for pepper soup'],
+  },
+  {
+    id: 'ehm-012',
+    name: 'Benin Giant African Snails',
+    category: 'seafood',
+    emoji: '🐌',
+    price: 40000,
+    unit: '5 snails',
+    description:
+      'Premium Benin Giant African snails — the largest variety, prized for their rich, meaty texture.',
+    details: ['5 giant snails', 'Benin variety', 'Extra large size', 'Premium quality'],
+  },
+  {
+    id: 'ehm-013',
+    name: 'Smoked Farmed Rabbits',
+    category: 'smoked-meats',
+    emoji: '🐇',
+    price: 45000,
+    unit: 'whole rabbit',
+    description:
+      'Premium smoked farmed rabbits. Lean, flavourful, and ready to cook. Great for stews, grills, and traditional dishes. Slow smoked to perfection and seasoned with signature blend of spices.',
+    details: ['Whole rabbit', 'Slow smoked', 'Lean protein', 'Seasoned with spices'],
+  },
+  {
+    id: 'ehm-014',
+    name: 'Palm Oil (60cl Can)',
+    category: 'oils',
+    emoji: '🫒',
+    price: 30000,
+    unit: 'pack of 12 (60cl cans)',
+    description:
+      'Pure, unrefined red palm oil in a 60cl sealed can. Rich in vitamins and natural nutrients. Bulk pack of 12 cans.',
+    details: ['12 x 60cl cans', 'Bulk value pack', '100% natural', 'Long shelf life'],
+  },
+  {
+    id: 'ehm-015',
+    name: 'Giant African Snails',
+    category: 'seafood',
+    emoji: '🐌',
+    price: 30000,
+    unit: '5 snails',
+    description:
+      'Fresh, cleaned Giant African snails. Perfect for pepper soup, stew, and traditional Nigerian cooking.',
+    details: ['5 snails per pack', 'Cleaned premium quality', 'Ready to cook', 'Rich in protein'],
+  },
+  {
+    id: 'ehm-016',
+    name: 'Dried Crayfish (Ground)',
+    category: 'seafood',
+    emoji: '🦐',
+    price: 1500,
+    unit: 'pack (250g)',
+    description:
+      'High-quality sun-dried crayfish, finely ground. Essential ingredient for egusi, jollof rice, and Nigerian stews.',
+    details: ['250g pack', 'Finely ground', 'Sun-dried', 'Resealable packaging'],
+  },
+  {
+    id: 'ehm-017',
+    name: 'Smoked Fish (Eja Abo / Sole Fish)',
+    category: 'seafood',
+    emoji: '🐟',
+    price: 2800,
+    unit: 'pack (600g)',
+    description:
+      'Locally sourced and carefully smoked catfish and tilapia. Adds rich, authentic smoky flavour to soups and stews. Chunky cuts.',
+    details: ['600g pack', 'Chunky cuts', 'Wood-smoked', 'Ready for cooking'],
   },
 
-  // ── Beverages ──────────────────────────────────────────
+  // ── New additions ─────────────────────────────────────
   {
-    id: 'bev-001',
-    name: 'Zobo Drink (Hibiscus)',
-    category: 'beverages',
-    emoji: '🥤',
-    price: 1000,
+    id: 'ehm-018',
+    name: 'Smoked Guinea Fowl',
+    category: 'smoked-meats',
+    emoji: '🍗',
+    price: 35000,
+    unit: 'whole bird',
     description:
-      'Refreshing chilled zobo drink made from dried hibiscus flowers with hints of ginger and clove.',
-    details: ['1 L bottle', 'All-natural', 'No artificial colour', 'Serve chilled'],
+      'Premium smoked guinea fowl, slow-smoked over wood fire for rich, gamey flavour. A delicacy prized across West Africa for its distinctive taste.',
+    details: ['Whole guinea fowl', 'Wood-fire smoked', 'Rich gamey flavour', 'Free-range sourced'],
   },
   {
-    id: 'bev-002',
-    name: 'Palm Wine (Fresh)',
-    category: 'beverages',
-    emoji: '🍷',
-    price: 3500,
+    id: 'ehm-019',
+    name: 'Smoked Spiced Rabbit',
+    category: 'smoked-meats',
+    emoji: '🐇',
+    price: 40000,
+    unit: 'whole rabbit',
     description:
-      'Freshly tapped palm wine — sweet, mildly alcoholic, and traditionally Nigerian. Best enjoyed cold.',
-    details: ['1 L bottle', 'Freshly tapped', 'Naturally fermented', 'Refrigerate on arrival'],
-  },
-  {
-    id: 'bev-003',
-    name: 'Kunu Aya (Tiger Nut Milk)',
-    category: 'beverages',
-    emoji: '🥛',
-    price: 1200,
-    description:
-      'Creamy tiger nut milk blended with dates, coconut, and a touch of ginger. A refreshing dairy-free drink.',
-    details: ['500 ml bottle', 'Dairy-free', 'No added sugar', 'Rich in vitamins'],
+      'Tender, juicy rabbit slow-smoked to perfection and seasoned with a signature blend of Nigerian spices. Lean, high-protein delicacy.',
+    details: ['Whole rabbit', 'Spice-seasoned', 'Slow smoked', 'High in protein, low in fat'],
   },
 ];
 
-/** IDs of products to feature on the homepage */
-export const FEATURED_IDS = ['snk-001', 'prt-001', 'grn-001', 'spc-003'];
+export const FEATURED_IDS = ['ehm-001', 'ehm-003', 'ehm-004', 'ehm-013'];
 
-/** Format number as Nigerian Naira */
+export const STORE_INFO = {
+  name: 'Ehmar Foods',
+  tagline: 'Premium Nigerian Food Products',
+  slogan: 'Fresh. Smoked. Authentic.',
+  phone: '+234 800 123 4567',
+  whatsapp: '+234 800 123 4567',
+  email: 'info@ehmarfoods.com',
+  address: 'Lagos, Nigeria',
+  deliveryAreas: ['Lagos', 'Abuja', 'Port Harcourt', 'Ibadan', 'Benin City', 'Enugu', 'Warri', 'Kano'],
+  freeDeliveryThreshold: 50000,
+  deliveryFee: 3000,
+};
+
 export function formatNaira(amount) {
-  return new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
+  return '₦' + amount.toLocaleString('en-NG');
 }
