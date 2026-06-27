@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B5E20;
+  --color-primary-dark: #0D3B0F;
+  --color-primary-light: #2E7D32;
+  --color-secondary: #F9A825;
+  --color-secondary-dark: #F57F17;
+  --color-accent: #E65100;
+  --color-dark: #1A1A1A;
+  --color-success: #43A047;
+  --color-danger: #E53935;
+
+  --font-sans: 'Poppins', sans-serif;
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1A1A1A;
+  background: #FAFAFA;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ── Hero gradient ─────────────────────────────────────── */
+
+.gradient-hero {
+  background: linear-gradient(135deg, #1B5E20 0%, #0D3B0F 100%);
+  color: #ffffff;
+}
+
+/* ── Buttons ───────────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #1B5E20;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0D3B0F;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 59, 15, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #F9A825;
+  color: #1A1A1A;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #F57F17;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 127, 23, 0.35);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background-color: transparent;
+  color: #1B5E20;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 2px solid #1B5E20;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cart:hover {
+  background-color: #1B5E20;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+}
+
+.btn-cart:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-cart svg,
+.btn-cart img {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ── Product card ──────────────────────────────────────── */
+
+.card-product {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Category badge ────────────────────────────────────── */
+
+.badge-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 9999px;
+  background-color: rgba(27, 94, 32, 0.1);
+  color: #1B5E20;
+}
+
+/* ── Price tag ─────────────────────────────────────────── */
+
+.price-tag {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1B5E20;
+  letter-spacing: -0.01em;
+}
