@@ -8,6 +8,11 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import TermsPage from './pages/TermsPage';
+import DeliveryInfoPage from './pages/DeliveryInfoPage';
+import ReturnPolicyPage from './pages/ReturnPolicyPage';
+import FAQPage from './pages/FAQPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   return (
@@ -23,6 +28,11 @@ export default function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/delivery-info" element={<DeliveryInfoPage />} />
+            <Route path="/return-policy" element={<ReturnPolicyPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

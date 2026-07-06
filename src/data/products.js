@@ -139,7 +139,7 @@ export const products = [
     category: 'seafood',
     emoji: '🐌',
     image: '/products/ehm-011.webp',
-    price: 15000,
+    price: 40000,
     unit: '5 snails',
     description:
       'Fresh, cleaned large snails. Great for pepper soup, stew, and traditional Nigerian dishes.',
@@ -151,7 +151,7 @@ export const products = [
     category: 'seafood',
     emoji: '🐌',
     image: '/products/ehm-012.jpg',
-    price: 40000,
+    price: 45000,
     unit: '5 snails',
     description:
       'Premium Benin Giant African snails — the largest variety, prized for their rich, meaty texture.',
@@ -288,6 +288,43 @@ export const products = [
     description:
       'Electric food warming mat that keeps your meals hot and ready to serve. Sleek, modern design with digital temperature controls. Perfect for family dinners, parties, and everyday use. Place your plates and bowls directly on the mat and enjoy warm food for hours.',
     details: ['Electric heated surface', 'Digital temperature controls', 'Holds multiple plates', 'Easy to clean', 'Safe for all plate types'],
+  },
+  {
+    id: 'ehm-024',
+    name: 'Ehmar Foods Vacuum Sealer',
+    category: 'kitchen',
+    emoji: '🔵',
+    image: '/products/ehm-024.jpg',
+    price: 28000,
+    unit: 'per unit',
+    description:
+      'Automatic food vacuum sealer with high suction power. Keeps meat, fish, vegetables and dry goods fresh for longer by sealing out air and moisture. Wet and dry modes, multi-bag sealing, simple one-touch operation. Perfect for meal prep, bulk storage, and preserving fresh produce.',
+    details: ['Wet & dry sealing modes', 'High suction power', 'Multi-bag seal', 'Moisture-proof & antibacterial', 'Simple one-touch operation'],
+  },
+  {
+    id: 'ehm-025',
+    name: 'Balashov Food Processor',
+    category: 'kitchen',
+    emoji: '🍲',
+    image: '/products/ehm-025.jpg',
+    price: 65000,
+    unit: 'per unit',
+    description:
+      'Balashov multi-function electric cooking pot with steamer tray and glass lid. Cook, steam, fry, boil and simmer all in one appliance. Adjustable temperature control and non-stick interior make it perfect for everyday family meals. Sleek design with rose-gold accents.',
+    details: ['Multi-function cooking pot', 'Includes steamer tray', 'Adjustable temperature control', 'Non-stick interior', 'Tempered glass lid'],
+  },
+  {
+    id: 'ehm-026',
+    name: 'Mini Refrigerator',
+    category: 'kitchen',
+    emoji: '🧊',
+    image: '/products/ehm-026.jpg',
+    images: ['/products/ehm-026.jpg', '/products/ehm-026b.jpg'],
+    price: 35000,
+    unit: 'per unit',
+    description:
+      'Compact portable mini refrigerator, perfect for keeping drinks, fruits, snacks, skincare and medicine cool. Retro design with a carry handle makes it ideal for bedrooms, offices, dorms and road trips. Quiet operation with both cooling and warming functions. Available in stylish colours.',
+    details: ['Compact & portable', 'Cooling & warming functions', 'Carry handle', 'Quiet operation', 'Great for drinks, fruits & skincare'],
   },
 ];
 

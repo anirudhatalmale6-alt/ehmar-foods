@@ -78,26 +78,29 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Hero visual – CSS-only food collage */}
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="relative w-80 h-80">
-                {/* Main circle */}
-                <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                  <span className="text-8xl select-none">🥘</span>
-                </div>
-                {/* Orbiting items */}
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-secondary/90 flex items-center justify-center text-3xl shadow-lg">
-                  🌶️
-                </div>
-                <div className="absolute top-1/2 -right-6 -translate-y-1/2 w-16 h-16 rounded-full bg-white/90 flex items-center justify-center text-3xl shadow-lg">
-                  🍚
-                </div>
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-secondary/90 flex items-center justify-center text-3xl shadow-lg">
-                  🐟
-                </div>
-                <div className="absolute top-1/2 -left-6 -translate-y-1/2 w-16 h-16 rounded-full bg-white/90 flex items-center justify-center text-3xl shadow-lg">
-                  🥜
-                </div>
+            {/* Hero visual – real product showcase */}
+            <div className="hidden lg:block">
+              <div className="grid grid-cols-2 gap-4">
+                {['ehm-013', 'ehm-003', 'ehm-009', 'ehm-001'].map((pid, i) => {
+                  const hp = products.find((p) => p.id === pid);
+                  if (!hp) return null;
+                  return (
+                    <Link
+                      key={pid}
+                      to={`/product/${pid}`}
+                      className={`block rounded-2xl overflow-hidden shadow-xl border border-white/20 aspect-square bg-white/10 no-underline ${
+                        i % 2 === 1 ? 'translate-y-6' : ''
+                      }`}
+                    >
+                      <img
+                        src={hp.image}
+                        alt={hp.name}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        loading="eager"
+                      />
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
