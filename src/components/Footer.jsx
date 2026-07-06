@@ -50,7 +50,7 @@ export default function Footer() {
                 <Globe className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/2348001234567"
+                href="https://wa.me/2348038966536"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/70 hover:bg-secondary hover:text-white transition-colors"
@@ -107,16 +107,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+2348001234567"
+                  href="tel:+2348038966536"
                   className="flex items-center gap-3 text-white/70 text-sm hover:text-secondary transition-colors no-underline"
                 >
                   <Phone className="w-4 h-4 text-secondary shrink-0" />
-                  +234 800 123 4567
+                  +234 803 896 6536
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/2348001234567"
+                  href="https://wa.me/2348038966536"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-white/70 text-sm hover:text-secondary transition-colors no-underline"

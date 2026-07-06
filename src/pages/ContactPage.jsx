@@ -13,14 +13,14 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+234 800 000 0000',
-    href: 'tel:+2348000000000',
+    value: '+234 803 896 6536',
+    href: 'tel:+2348038966536',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+234 800 000 0000',
-    href: 'https://wa.me/2348000000000',
+    value: '+234 803 896 6536',
+    href: 'https://wa.me/2348038966536',
   },
   {
     icon: Mail,
@@ -286,7 +286,7 @@ export default function ContactPage() {
                   on WhatsApp for the best prices and faster processing.
                 </p>
                 <a
-                  href="https://wa.me/2348000000000?text=Hi%20Ehmar%20Foods!%20I%27m%20interested%20in%20a%20bulk%20order."
+                  href="https://wa.me/2348038966536?text=Hi%20Ehmar%20Foods!%20I%27m%20interested%20in%20a%20bulk%20order."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary text-sm"

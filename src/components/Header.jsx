@@ -32,14 +32,14 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4">
             <a
-              href="tel:+2348001234567"
+              href="tel:+2348038966536"
               className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">+234 800 123 4567</span>
+              <span className="hidden sm:inline">+234 803 896 6536</span>
             </a>
             <a
-              href="https://wa.me/2348001234567"
+              href="https://wa.me/2348038966536"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors"
