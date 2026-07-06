@@ -119,19 +119,31 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
                 to={`/shop/${cat.slug}`}
-                className="group flex flex-col items-center gap-3 p-6 rounded-xl bg-gray-50 border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all duration-300 no-underline"
+                className="group flex flex-col rounded-xl overflow-hidden bg-gray-50 border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all duration-300 no-underline"
               >
-                <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                  {cat.emoji}
-                </span>
-                <span className="font-semibold text-dark group-hover:text-primary transition-colors">
-                  {cat.name}
-                </span>
+                <div className="relative h-36 sm:h-44 overflow-hidden bg-gray-100">
+                  {cat.image ? (
+                    <img
+                      src={cat.image}
+                      alt={cat.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <span className="flex items-center justify-center w-full h-full text-5xl">
+                      {cat.emoji}
+                    </span>
+                  )}
+                  <span className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+                  <span className="absolute bottom-3 left-4 right-4 font-semibold text-white text-base drop-shadow-sm">
+                    {cat.name}
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

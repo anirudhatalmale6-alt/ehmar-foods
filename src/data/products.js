@@ -1,14 +1,14 @@
 /* ── Ehmar Foods – Product catalogue & helpers ───────────── */
 
 export const categories = [
-  { slug: 'nuts-snacks',  name: 'Nuts & Snacks',      emoji: '🥜' },
-  { slug: 'seafood',      name: 'Seafood & Fish',      emoji: '🐟' },
-  { slug: 'smoked-meats', name: 'Smoked Meats',        emoji: '🍖' },
-  { slug: 'beans-grains', name: 'Beans & Grains',      emoji: '🌾' },
-  { slug: 'oils',         name: 'Oils & Pantry',       emoji: '🫒' },
-  { slug: 'frozen',       name: 'Frozen Foods',         emoji: '🧊' },
-  { slug: 'teas',         name: 'Teas & Wellness',      emoji: '🍵' },
-  { slug: 'kitchen',      name: 'Kitchen Accessories',  emoji: '🍽️' },
+  { slug: 'nuts-snacks',  name: 'Nuts & Snacks',      emoji: '🥜',  image: '/products/cat-nuts.jpg' },
+  { slug: 'seafood',      name: 'Seafood & Fish',      emoji: '🐟',  image: '/products/ehm-003.jpg' },
+  { slug: 'smoked-meats', name: 'Smoked Meats',        emoji: '🍖',  image: '/products/ehm-019.jpg' },
+  { slug: 'beans-grains', name: 'Beans & Grains',      emoji: '🌾',  image: '/products/ehm-002.jpg' },
+  { slug: 'oils',         name: 'Oils & Pantry',       emoji: '🫒',  image: '/products/ehm-014.jpg' },
+  { slug: 'frozen',       name: 'Frozen Foods',         emoji: '🧊',  image: '/products/ehm-011.webp' },
+  { slug: 'teas',         name: 'Teas & Wellness',      emoji: '🍵',  image: '/products/ehm-020.jpg' },
+  { slug: 'kitchen',      name: 'Kitchen Accessories',  emoji: '🍽️',  image: '/products/ehm-021.webp' },
 ];
 
 export const products = [
@@ -26,16 +26,15 @@ export const products = [
   },
   {
     id: 'ehm-002',
-    name: 'Ehmar Foods High Protein Dehydrated Refried Beans',
+    name: 'Ehmar High Protein Dehydrated Ewa Agoyin Beans',
     category: 'beans-grains',
     emoji: '🫘',
     image: '/products/ehm-002.jpg',
-    images: ['/products/ehm-002.jpg', '/products/ehm-002b.jpg'],
     price: 3500,
-    unit: 'per 3g pouch',
+    unit: 'per 3oz (85g) pouch',
     description:
-      'Premium high protein dehydrated refried beans, packaged in a convenient pouch. Made from premium quality beans.',
-    details: ['High protein content', 'Dehydrated for long shelf life', 'Easy to prepare', 'Made from quality beans'],
+      'Authentic Nigerian Ewa Agoyin — high protein, dehydrated beans in a convenient pouch. Just add water, cook and enjoy. Plant-based, gluten-free, and made with no preservatives or additives.',
+    details: ['High in plant protein', 'Dehydrated for long shelf life', 'Just add water, cook & enjoy', 'Gluten-free & plant based', 'No preservatives or additives'],
   },
   {
     id: 'ehm-003',
@@ -135,11 +134,11 @@ export const products = [
   },
   {
     id: 'ehm-011',
-    name: 'Large Snails',
+    name: 'Large African Snails',
     category: 'seafood',
     emoji: '🐌',
     image: '/products/ehm-011.webp',
-    price: 40000,
+    price: 35000,
     unit: '5 snails',
     description:
       'Fresh, cleaned large snails. Great for pepper soup, stew, and traditional Nigerian dishes.',
@@ -187,7 +186,7 @@ export const products = [
     category: 'seafood',
     emoji: '🐌',
     image: '/products/ehm-015.jpg',
-    price: 30000,
+    price: 40000,
     unit: '5 snails',
     description:
       'Fresh, cleaned Giant African snails. Perfect for pepper soup, stew, and traditional Nigerian cooking.',
