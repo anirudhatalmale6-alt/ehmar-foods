@@ -24,8 +24,16 @@ export default function ProductPage() {
   const { addItem } = useCart();
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
+  const [activeImg, setActiveImg] = useState(0);
 
   const product = products.find((p) => p.id === id);
+
+  const gallery =
+    product?.images && product.images.length > 0
+      ? product.images
+      : product?.image
+        ? [product.image]
+        : [];
 
   const related = useMemo(() => {
     if (!product) return [];
@@ -92,11 +100,46 @@ export default function ProductPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="grid lg:grid-cols-2">
-            <div className="relative min-h-[320px] lg:min-h-[480px] overflow-hidden">
-              <ProductImage product={product} size="xl" />
-              <span className="badge-category absolute top-4 left-4 text-sm">
-                {catObj?.name}
-              </span>
+            <div>
+              <div className="relative min-h-[320px] lg:min-h-[480px] overflow-hidden">
+                {gallery.length > 1 ? (
+                  <img
+                    src={gallery[activeImg]}
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <ProductImage product={product} size="xl" />
+                )}
+                <span className="badge-category absolute top-4 left-4 text-sm">
+                  {catObj?.name}
+                </span>
+              </div>
+              {gallery.length > 1 && (
+                <div className="flex gap-3 p-4 bg-white border-t border-gray-100">
+                  {gallery.map((src, i) => (
+                    <button
+                      key={src}
+                      type="button"
+                      onClick={() => setActiveImg(i)}
+                      className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
+                        i === activeImg
+                          ? 'border-primary'
+                          : 'border-gray-200 hover:border-primary/40'
+                      }`}
+                      aria-label={`View image ${i + 1}`}
+                    >
+                      <img
+                        src={src}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Info */}

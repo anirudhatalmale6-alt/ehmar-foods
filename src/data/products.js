@@ -30,6 +30,7 @@ export const products = [
     category: 'beans-grains',
     emoji: '🫘',
     image: '/products/ehm-002.jpg',
+    images: ['/products/ehm-002.jpg', '/products/ehm-002b.jpg'],
     price: 3500,
     unit: 'per 3g pouch',
     description:
