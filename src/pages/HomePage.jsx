@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { products, categories, FEATURED_IDS, formatNaira } from '../data/products';
 import { useCart } from '../data/cartContext';
+import ProductImage from '../components/ProductImage';
 
 /* ══════════════════════════════════════════════════════════════
    HomePage
@@ -157,10 +158,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featured.map((product) => (
               <div key={product.id} className="card-product flex flex-col">
-                {/* Image placeholder */}
                 <Link to={`/product/${product.id}`} className="no-underline">
-                  <div className="relative h-52 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                    <span className="text-7xl select-none">{product.emoji}</span>
+                  <div className="relative h-52 overflow-hidden">
+                    <ProductImage product={product} size="lg" />
                     <span className="badge-category absolute top-3 left-3">
                       {categories.find((c) => c.slug === product.category)?.name}
                     </span>

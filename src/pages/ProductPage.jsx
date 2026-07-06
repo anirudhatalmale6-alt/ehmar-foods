@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { products, categories, formatNaira } from '../data/products';
 import { useCart } from '../data/cartContext';
+import ProductImage from '../components/ProductImage';
 
 /* ══════════════════════════════════════════════════════════════
    ProductPage — single product detail view
@@ -91,14 +92,8 @@ export default function ProductPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="grid lg:grid-cols-2">
-            {/* Image area */}
-            <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/5 flex items-center justify-center min-h-[320px] lg:min-h-[480px]">
-              {/* Decorative circles */}
-              <div className="absolute top-8 right-8 w-24 h-24 rounded-full bg-primary/5" />
-              <div className="absolute bottom-12 left-12 w-16 h-16 rounded-full bg-secondary/10" />
-              <span className="text-[8rem] sm:text-[10rem] select-none relative z-10">
-                {product.emoji}
-              </span>
+            <div className="relative min-h-[320px] lg:min-h-[480px] overflow-hidden">
+              <ProductImage product={product} size="xl" />
               <span className="badge-category absolute top-4 left-4 text-sm">
                 {catObj?.name}
               </span>
@@ -237,8 +232,8 @@ export default function ProductPage() {
               {related.map((rel) => (
                 <div key={rel.id} className="card-product flex flex-col">
                   <Link to={`/product/${rel.id}`} className="no-underline">
-                    <div className="relative h-44 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                      <span className="text-6xl select-none">{rel.emoji}</span>
+                    <div className="relative h-44 overflow-hidden">
+                      <ProductImage product={rel} size="md" />
                     </div>
                   </Link>
                   <div className="p-4 flex flex-col flex-1">

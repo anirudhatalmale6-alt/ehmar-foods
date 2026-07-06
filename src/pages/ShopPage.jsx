@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { ShoppingCart, Search, SlidersHorizontal, X, ChevronRight } from 'lucide-react';
 import { products, categories, formatNaira } from '../data/products';
 import { useCart } from '../data/cartContext';
+import ProductImage from '../components/ProductImage';
 
 /* ══════════════════════════════════════════════════════════════
    ShopPage — product listing with sidebar filters & sorting
@@ -217,10 +218,9 @@ export default function ShopPage() {
                   const catObj = categories.find((c) => c.slug === product.category);
                   return (
                     <div key={product.id} className="card-product flex flex-col">
-                      {/* Image area */}
                       <Link to={`/product/${product.id}`} className="no-underline">
-                        <div className="relative h-48 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                          <span className="text-6xl select-none">{product.emoji}</span>
+                        <div className="relative h-48 overflow-hidden">
+                          <ProductImage product={product} size="md" />
                           <span className="badge-category absolute top-3 left-3">
                             {catObj?.name}
                           </span>

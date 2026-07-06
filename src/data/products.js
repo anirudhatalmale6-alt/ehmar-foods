@@ -12,12 +12,12 @@ export const categories = [
 ];
 
 export const products = [
-  // ── Nuts & Snacks ─────────────────────────────────────
   {
     id: 'ehm-001',
     name: 'Ehmar Foods Mixed Nuts',
     category: 'nuts-snacks',
     emoji: '🥜',
+    image: null,
     price: 7500,
     unit: 'per pack',
     description:
@@ -29,6 +29,7 @@ export const products = [
     name: 'Ehmar Foods High Protein Dehydrated Refried Beans',
     category: 'beans-grains',
     emoji: '🫘',
+    image: '/products/ehm-002.jpg',
     price: 3500,
     unit: 'per 3g pouch',
     description:
@@ -40,6 +41,7 @@ export const products = [
     name: 'Dried Crayfish',
     category: 'seafood',
     emoji: '🦐',
+    image: null,
     price: 25000,
     unit: '1kg pack',
     description:
@@ -51,6 +53,7 @@ export const products = [
     name: 'Asa Fish (Large Catfish)',
     category: 'seafood',
     emoji: '🐟',
+    image: null,
     price: 15000,
     unit: 'pack (2 large catfish)',
     description:
@@ -62,6 +65,7 @@ export const products = [
     name: 'Smoked Mangala Fish',
     category: 'seafood',
     emoji: '🐠',
+    image: null,
     price: 20000,
     unit: 'pack (3 pieces)',
     description:
@@ -73,6 +77,7 @@ export const products = [
     name: 'Frozen French Fries',
     category: 'frozen',
     emoji: '🍟',
+    image: null,
     price: 15000,
     unit: '2kg bag',
     description:
@@ -84,6 +89,7 @@ export const products = [
     name: 'White Mushrooms',
     category: 'frozen',
     emoji: '🍄',
+    image: null,
     price: 2000,
     unit: 'per pack',
     description:
@@ -95,6 +101,7 @@ export const products = [
     name: 'Stone-Free Clean Beans',
     category: 'beans-grains',
     emoji: '🫘',
+    image: null,
     price: 2500,
     unit: '1kg',
     description:
@@ -106,6 +113,7 @@ export const products = [
     name: 'Palm Oil (5L Container)',
     category: 'oils',
     emoji: '🫒',
+    image: null,
     price: 20000,
     unit: '5L container',
     description:
@@ -117,6 +125,7 @@ export const products = [
     name: 'Palm Oil Private Label',
     category: 'oils',
     emoji: '🏷️',
+    image: null,
     price: 3000,
     unit: 'per can',
     description:
@@ -128,6 +137,7 @@ export const products = [
     name: 'Large Snails',
     category: 'seafood',
     emoji: '🐌',
+    image: null,
     price: 15000,
     unit: '5 snails',
     description:
@@ -139,6 +149,7 @@ export const products = [
     name: 'Benin Giant African Snails',
     category: 'seafood',
     emoji: '🐌',
+    image: null,
     price: 40000,
     unit: '5 snails',
     description:
@@ -150,6 +161,7 @@ export const products = [
     name: 'Smoked Rabbit Meat',
     category: 'smoked-meats',
     emoji: '🐇',
+    image: '/products/ehm-013.jpg',
     price: 45000,
     unit: 'whole rabbit',
     description:
@@ -161,6 +173,7 @@ export const products = [
     name: 'Palm Oil (60cl Can)',
     category: 'oils',
     emoji: '🫒',
+    image: null,
     price: 30000,
     unit: 'pack of 12 (60cl cans)',
     description:
@@ -172,6 +185,7 @@ export const products = [
     name: 'Giant African Snails',
     category: 'seafood',
     emoji: '🐌',
+    image: null,
     price: 30000,
     unit: '5 snails',
     description:
@@ -183,6 +197,7 @@ export const products = [
     name: 'Dried Crayfish (Ground)',
     category: 'seafood',
     emoji: '🦐',
+    image: null,
     price: 1500,
     unit: 'pack (250g)',
     description:
@@ -194,19 +209,19 @@ export const products = [
     name: 'Smoked Fish (Eja Abo / Sole Fish)',
     category: 'seafood',
     emoji: '🐟',
+    image: null,
     price: 2800,
     unit: 'pack (600g)',
     description:
       'Locally sourced and carefully smoked catfish and tilapia. Adds rich, authentic smoky flavour to soups and stews. Chunky cuts.',
     details: ['600g pack', 'Chunky cuts', 'Wood-smoked', 'Ready for cooking'],
   },
-
-  // ── New additions ─────────────────────────────────────
   {
     id: 'ehm-018',
     name: 'Smoked Guinea Fowl',
     category: 'smoked-meats',
     emoji: '🍗',
+    image: '/products/ehm-018.jpg',
     price: 35000,
     unit: 'whole bird',
     description:
@@ -218,6 +233,7 @@ export const products = [
     name: 'Smoked Spiced Rabbit',
     category: 'smoked-meats',
     emoji: '🐇',
+    image: '/products/ehm-019.jpg',
     price: 40000,
     unit: 'whole rabbit',
     description:
@@ -229,6 +245,7 @@ export const products = [
     name: 'Bitter Leaf Tea',
     category: 'teas',
     emoji: '🍵',
+    image: '/products/ehm-020.jpg',
     price: 5000,
     unit: 'pack (50 tea bags)',
     description:
@@ -240,6 +257,7 @@ export const products = [
     name: 'Ehmar Odorless Cassava Flour (25kg)',
     category: 'beans-grains',
     emoji: '🌾',
+    image: '/products/ehm-022.jpg',
     price: 65000,
     unit: '25kg bag',
     description:
@@ -251,6 +269,7 @@ export const products = [
     name: 'Ehmar Odorless Cassava Flour (16oz)',
     category: 'beans-grains',
     emoji: '🌾',
+    image: '/products/ehm-023.jpg',
     price: 3500,
     unit: '16oz pack',
     description:
@@ -262,6 +281,7 @@ export const products = [
     name: 'Ehmar Food Warmer Mat',
     category: 'kitchen',
     emoji: '🔥',
+    image: '/products/ehm-021.webp',
     price: 38000,
     unit: 'per unit',
     description:
@@ -270,7 +290,7 @@ export const products = [
   },
 ];
 
-export const FEATURED_IDS = ['ehm-001', 'ehm-003', 'ehm-004', 'ehm-013'];
+export const FEATURED_IDS = ['ehm-001', 'ehm-003', 'ehm-013', 'ehm-019'];
 
 export const STORE_INFO = {
   name: 'Ehmar Foods',
