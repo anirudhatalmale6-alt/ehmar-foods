@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ShoppingCart,
+  ShoppingBag,
   Truck,
   Shield,
   Star,
@@ -258,6 +259,77 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4.5 Personal Shopping Service ──────────────────── */}
+      <section className="py-16 sm:py-20 gradient-hero relative overflow-hidden">
+        <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-white/5 pointer-events-none" />
+        <div className="absolute bottom-0 -left-12 w-56 h-56 rounded-full bg-secondary/10 pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Image */}
+            <div className="order-2 lg:order-1">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 max-w-md mx-auto">
+                <img
+                  src="/personal-shopper.jpg"
+                  alt="Ehmar Foods personal shopper with a branded tote bag of products"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <span className="inline-block px-4 py-1.5 mb-5 text-sm font-semibold rounded-full bg-secondary/20 text-secondary">
+                <ShoppingBag className="inline w-4 h-4 mr-1 -mt-0.5" />
+                Personal Shopping Service
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                Your Personal Shopper in
+                <br className="hidden sm:block" /> Nigeria &amp; the USA
+              </h2>
+              <p className="mt-5 text-lg text-white/80 max-w-lg mx-auto lg:mx-0">
+                We provide professional personal shopping services to approved,
+                registered Ehmar Foods members. Our shoppers handle your shopping
+                in both Nigeria and the United States and deliver your items
+                directly to your doorstep.
+              </p>
+
+              <ul className="mt-6 space-y-3 text-left max-w-md mx-auto lg:mx-0">
+                {[
+                  'Shopping in both Nigeria and the United States',
+                  'Handled by trusted Ehmar Foods shoppers',
+                  'Delivered directly to your doorstep',
+                  'Exclusive to approved, registered members',
+                ].map((point) => (
+                  <li key={point} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-white/85">{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="https://wa.me/2348038966536?text=Hello%20Ehmar%20Foods%2C%20I%27d%20like%20to%20register%20for%20the%20Personal%20Shopping%20Service."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary text-base px-8 py-3.5 rounded-lg font-semibold no-underline inline-flex items-center justify-center gap-2"
+                >
+                  Become a Member <ArrowRight className="w-5 h-5" />
+                </a>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-colors no-underline"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
