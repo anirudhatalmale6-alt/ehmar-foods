@@ -24,7 +24,7 @@ const VALUES = [
   {
     icon: Heart,
     title: 'Customer Service',
-    text: 'Our dedicated team is always ready to help, from placing your order to delivery at your doorstep.',
+    text: 'Our dedicated team is always ready to help, from placing your order to delivery at your doorsteps.',
   },
   {
     icon: Users,
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             &ldquo;To provide authentic, high-quality Nigerian food products
             with the convenience of online shopping&mdash;delivering freshness,
-            flavour, and trust to every doorstep.&rdquo;
+            flavour, and trust to every doorsteps.&rdquo;
           </p>
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-gray-500 mb-8 max-w-lg mx-auto">
             Browse our collection of premium Nigerian food products and enjoy
-            fast delivery straight to your doorstep.
+            fast delivery straight to your doorsteps.
           </p>
           <Link to="/shop" className="btn-primary">
             Browse Products

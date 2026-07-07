@@ -294,16 +294,16 @@ export default function HomePage() {
               </h2>
               <p className="mt-5 text-lg text-white/80 max-w-lg mx-auto lg:mx-0">
                 We provide professional personal shopping services to approved,
-                registered Ehmar Foods members. Our shoppers handle your shopping
+                registered Ehmar Foods members. Our Shopper handles your shopping
                 in both Nigeria and the United States and deliver your items
-                directly to your doorstep.
+                directly to your doorsteps.
               </p>
 
               <ul className="mt-6 space-y-3 text-left max-w-md mx-auto lg:mx-0">
                 {[
                   'Shopping in both Nigeria and the United States',
                   'Handled by trusted Ehmar Foods shoppers',
-                  'Delivered directly to your doorstep',
+                  'Delivered directly to your doorsteps',
                   'Exclusive to approved, registered members',
                 ].map((point) => (
                   <li key={point} className="flex items-start gap-3">
@@ -364,7 +364,7 @@ export default function HomePage() {
                 step: '03',
                 icon: Truck,
                 title: 'We Deliver',
-                desc: 'Sit back and relax while we carefully pack and deliver your order to your doorstep.',
+                desc: 'Sit back and relax while we carefully pack and deliver your order to your doorsteps.',
               },
             ].map((item, idx) => (
               <div key={item.step} className="relative text-center">

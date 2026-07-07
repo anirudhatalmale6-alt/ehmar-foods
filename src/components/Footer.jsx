@@ -37,7 +37,7 @@ export default function Footer() {
             <p className="text-white/70 text-sm leading-relaxed">
               Ehmar Foods is your trusted online grocery store in Nigeria. We deliver
               fresh produce, pantry essentials, and authentic Nigerian food products
-              straight to your doorstep at the best prices.
+              straight to your doorsteps at the best prices.
             </p>
             <div className="flex items-center gap-3 mt-5">
               <a
