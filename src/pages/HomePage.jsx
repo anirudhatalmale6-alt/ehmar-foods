@@ -23,14 +23,34 @@ export default function HomePage() {
   const { addItem } = useCart();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [subLoading, setSubLoading] = useState(false);
+  const [subError, setSubError] = useState('');
 
   const featured = products.filter((p) => FEATURED_IDS.includes(p.id));
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-      setEmail('');
+    const value = email.trim();
+    if (!value) return;
+    setSubLoading(true);
+    setSubError('');
+    try {
+      const res = await fetch('/subscribe.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: value }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        setSubscribed(true);
+        setEmail('');
+      } else {
+        setSubError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setSubError('Network error. Please check your connection and try again.');
+    } finally {
+      setSubLoading(false);
     }
   };
 
@@ -413,28 +433,40 @@ export default function HomePage() {
               {subscribed ? (
                 <div className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/20 text-white font-semibold">
                   <CheckCircle className="w-5 h-5 text-secondary" />
-                  You&apos;re subscribed! Check your email for your code.
+                  You&apos;re subscribed! Thanks for joining — we&apos;ll keep you
+                  posted on new arrivals and special deals.
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubscribe}
-                  className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-                >
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    className="flex-1 px-5 py-3.5 rounded-lg text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"
-                  />
-                  <button
-                    type="submit"
-                    className="btn-secondary px-8 py-3.5 rounded-lg font-semibold whitespace-nowrap"
+                <>
+                  <form
+                    onSubmit={handleSubscribe}
+                    className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
                   >
-                    Subscribe
-                  </button>
-                </form>
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (subError) setSubError('');
+                      }}
+                      placeholder="Enter your email"
+                      className="flex-1 px-5 py-3.5 rounded-lg text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"
+                    />
+                    <button
+                      type="submit"
+                      disabled={subLoading}
+                      className="btn-secondary px-8 py-3.5 rounded-lg font-semibold whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                      {subLoading ? 'Subscribing…' : 'Subscribe'}
+                    </button>
+                  </form>
+                  {subError && (
+                    <p className="mt-3 text-sm text-white bg-danger/80 rounded-lg px-4 py-2 inline-block">
+                      {subError}
+                    </p>
+                  )}
+                </>
               )}
             </div>
           </div>

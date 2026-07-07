@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /ehmarfoods/
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /ehmarfoods/index.html [L]
+
+# Protect the captured subscriber list from public access
+<Files "subscribers.csv">
+  Require all denied
+</Files>

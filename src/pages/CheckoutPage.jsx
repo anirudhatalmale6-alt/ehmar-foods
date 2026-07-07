@@ -365,13 +365,13 @@ export default function CheckoutPage() {
                       <div className="mt-3 p-3 bg-white rounded-lg border border-gray-100 text-sm space-y-1">
                         <p className="text-gray-500">Transfer to:</p>
                         <p className="font-semibold text-dark">
-                          Bank: Access Bank
+                          Bank: Zenith Bank
                         </p>
                         <p className="font-semibold text-dark">
-                          Account Name: Ehmar Foods Ltd
+                          Account Name: Be-sure Test
                         </p>
                         <p className="font-semibold text-dark">
-                          Account Number: 0123456789
+                          Account Number: 1017467574
                         </p>
                         <p className="text-xs text-gray-400 mt-2">
                           Please use your order number as the transfer reference.
