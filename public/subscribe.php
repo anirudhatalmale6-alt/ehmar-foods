@@ -44,7 +44,8 @@ if (function_exists('mail')) {
     $body    = "You have a new newsletter subscriber.\n\nEmail: $email\nDate:  $when";
     $headers = "From: Ehmar Foods <no-reply@ehmarfoods.com>\r\n"
              . "Content-Type: text/plain; charset=UTF-8\r\n";
-    @mail($to, $subject, $body, $headers);
+    /* Envelope sender on our own domain, so SPF can align once the hosting server is in the SPF record */
+    @mail($to, $subject, $body, $headers, '-fno-reply@ehmarfoods.com');
 }
 
 echo json_encode(['ok' => true]);
