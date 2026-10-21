@@ -99,31 +99,24 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Hero visual – real product showcase */}
-            <div className="hidden lg:block">
-              <div className="grid grid-cols-2 gap-4">
-                {['ehm-013', 'ehm-003', 'ehm-009', 'ehm-001'].map((pid, i) => {
-                  const hp = products.find((p) => p.id === pid);
-                  if (!hp) return null;
-                  return (
-                    <Link
-                      key={pid}
-                      to={`/product/${pid}`}
-                      className={`block rounded-2xl overflow-hidden shadow-xl border border-white/20 aspect-square bg-white/10 no-underline ${
-                        i % 2 === 1 ? 'translate-y-6' : ''
-                      }`}
-                    >
-                      <img
-                        src={hp.image}
-                        alt={hp.name}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                        loading="eager"
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
+            {/* Hero visual – the Ehmar Personal Shopper */}
+            <a
+              href="#personal-shopper"
+              className="block relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 no-underline group"
+            >
+              <img
+                src="/ehmar-shopper.jpg"
+                alt="Ehmar Foods personal shopper with shopping bags in a department store"
+                className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                loading="eager"
+                width="1408"
+                height="768"
+              />
+              <span className="absolute left-4 bottom-4 inline-flex items-center gap-2 bg-white/95 text-dark text-sm font-semibold px-4 py-2 rounded-full shadow-lg">
+                <ShoppingBag className="w-4 h-4 text-primary" />
+                Your Ehmar Personal Shopper
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -284,7 +277,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 4.5 Personal Shopping Service ──────────────────── */}
-      <section className="py-16 sm:py-20 gradient-hero relative overflow-hidden">
+      <section id="personal-shopper" className="py-16 sm:py-20 gradient-hero relative overflow-hidden scroll-mt-24">
         <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-white/5 pointer-events-none" />
         <div className="absolute bottom-0 -left-12 w-56 h-56 rounded-full bg-secondary/10 pointer-events-none" />
 
